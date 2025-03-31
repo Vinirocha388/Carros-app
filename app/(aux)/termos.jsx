@@ -55,19 +55,19 @@ const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
     padding: 20,
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#E12712',
   },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
     textAlign: 'center',
     marginBottom: 20,
-    color: '#333',
+    color: '#fff',
   },
   section: {
     marginBottom: 20,
     padding: 15,
-    backgroundColor: '#fff',
+    backgroundColor: '#DB3D3A',
     borderRadius: 8,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
@@ -79,11 +79,11 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     marginBottom: 10,
-    color: '#000',
+    color: '#fff',
   },
   sectionText: {
     fontSize: 16,
-    color: '#000',
+    color: '#fff',
     lineHeight: 24,
   },
   button: {
