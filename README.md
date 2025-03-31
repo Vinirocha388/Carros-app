@@ -8,5 +8,5 @@ Para executar o programa, você precisará instalar as dependências. Execute o 
 
 ```bash
 npm install
-
+npx expo start
 
