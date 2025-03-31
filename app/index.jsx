@@ -1,121 +1,145 @@
-import { StyleSheet, Text, TouchableOpacity,ScrollView, Image, View } from "react-native";
+import { View, Text, Pressable, StyleSheet, Image, ScrollView } from 'react-native';
+import { Link, Stack } from 'expo-router';
 
 export default function Home() {
-  const handleLearnMore = (character) => {
-    alert(`Saiba mais sobre ${character}!`);
-  };
-
   return (
-    <ScrollView contentContainerStyle={styles.scrollContainer}>
-      <Text style={styles.title}>Bem-vindo ao Mundo de Carros!</Text>
-      <Text style={styles.subtitle}>Explore os personagens e aventuras do filme Carros.</Text>
-
-      {/* Relâmpago McQueen */}
-      <Image
-        source={{ uri: "https://www.bing.com/th/id/OIP.JEX4LifoPLNN1aCNdxEnEgHaEK?w=173&h=140&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" }}
+    <ScrollView contentContainerStyle={styles.container}> 
+      <Stack.Screen options={{ 
+        title: 'Home',
+        headerStyle: { backgroundColor: '#E12712' },
+        headerTintColor: '#fff',
+        headerTitleStyle: { fontWeight: 'bold', fontSize: 30 }
+      }} />
+      
+      <Image 
+        source={{ uri: 'https://wallpapers.com/images/featured/relampago-mcqueen-iu9tkhl5om9la2fo.jpg' }}
         style={styles.image}
       />
-      <Text style={styles.description}>
-        Relâmpago McQueen é um carro de corrida novato que sonha em ser o melhor.
-      </Text>
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => handleLearnMore("Relâmpago McQueen")}
-      >
-        <Text style={styles.buttonText}>Saiba Mais</Text>
-      </TouchableOpacity>
-
-      {/* Mate */}
-      <Image
-        source={{ uri: "https://th.bing.com/th/id/OIP.OCZAfkUNw5Uc-bIQi4yAFgHaFV?w=294&h=212&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2" }}
+      
+      <Text style={styles.welcomeText}>Bem-vindo mundo de Carros!</Text>
+      <Text style={styles.description}>Reviva a emoção das corridas de Relâmpago McQueen e seus amigos nesta incrível jornada pelo mundo de Carros!</Text>
+      
+      <Image 
+        source={{ uri: 'https://tm.ibxk.com.br/2017/07/04/04111802232093.jpg?ims=1200xorig' }}
         style={styles.image}
       />
-      <Text style={styles.description}>
-        Mate é o melhor amigo de McQueen e um guincho divertido e leal.
-      </Text>
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => handleLearnMore("Mate")}
-      >
-        <Text style={styles.buttonText}>Saiba Mais</Text>
-      </TouchableOpacity>
-
-      {/* Sally */}
-      <Image
-        source={{ uri: "https://th.bing.com/th/id/OIP.C-vMeYCl4tP5E_IBT422mQHaET?w=327&h=190&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2" }}
+      
+      <Image 
+        source={{ uri: 'https://i0.wp.com/26.media.tumblr.com/tumblr_leo18gMZRp1qd6icvo1_500.jpg' }}
         style={styles.image}
       />
-      <Text style={styles.description}>
-        Sally é uma Porsche azul charmosa e a paixão de McQueen.
-      </Text>
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => handleLearnMore("Sally")}
-      >
-        <Text style={styles.buttonText}>Saiba Mais</Text>
-      </TouchableOpacity>
-
-      {/* Rodapé */}
+      
+      <View style={styles.buttonContainer}>
+        <Text style={styles.buttonDescription}>Saiba mais sobre o universo do filme Carros</Text>
+        <Link href="/sobre" asChild>
+          <Pressable style={styles.button}>
+            <Text style={styles.buttonText}>Sobre</Text>
+          </Pressable>
+        </Link>
+      </View>
+      
+     
+      
+      <View style={styles.buttonContainer}>
+        <Text style={styles.buttonDescription}>Acesse sua conta para ter uma experiência completa</Text>
+        <Link href="/login" asChild>
+          <Pressable style={styles.button}>
+            <Text style={styles.buttonText}>Login</Text>
+          </Pressable>
+        </Link>
+      </View>
+      <View style={styles.buttonContainer}>
+       
+        <Link href="/(aux)/termos" asChild>
+          <Pressable style={styles.transparentButton}>
+            <Text style={styles.transparentButtonText}>Leia os Termos</Text>
+          </Pressable>
+        </Link>
+      </View>
+      
       <View style={styles.footer}>
-        <Text style={styles.footerText}>© 2023 Mundo de Carros. Todos os direitos reservados.</Text>
+        <Text style={styles.footerText}>© 2023 Carros App. Todos os direitos reservados.</Text>
       </View>
     </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  scrollContainer: {
+  container: {
     flexGrow: 1,
-    justifyContent: "center",
-    alignItems: "center",
+    alignItems: 'center',
     padding: 20,
-    backgroundColor: "#F5F5F5",
-  },
-  title: {
-    fontSize: 28,
-    fontWeight: "bold",
-    marginBottom: 10,
-    textAlign: "center",
-  },
-  subtitle: {
-    fontSize: 18,
-    marginBottom: 20,
-    textAlign: "center",
+    backgroundColor: '#E12712',
   },
   image: {
     width: 300,
     height: 200,
-    marginBottom: 15,
+    marginBottom: 20,
     borderRadius: 10,
+  },
+  welcomeText: {
+    fontSize: 22,
+    fontWeight: 'bold',
+    color: '#fff',
+    marginBottom: 10,
+    textAlign: 'center',
   },
   description: {
     fontSize: 16,
-    textAlign: "center",
-    marginBottom: 10,
-  },
-  button: {
-    backgroundColor: "#FF4500",
-    paddingVertical: 10,
+    color: '#fff',
+    textAlign: 'center',
+    marginBottom: 20,
     paddingHorizontal: 20,
-    borderRadius: 5,
+  },
+  buttonContainer: {
+    alignItems: 'center',
     marginBottom: 20,
   },
+  buttonDescription: {
+    fontSize: 14,
+    color: '#fff',
+    textAlign: 'center',
+    marginBottom: 5,
+  },
+  button: {
+    backgroundColor: '#E12712',
+    paddingVertical: 12,
+    paddingHorizontal: 25,
+    borderRadius: 30,
+    alignItems: 'center',
+    width: 220,
+    elevation: 5,
+  },
+  transparentButton: {
+    backgroundColor: 'transparent',
+    paddingVertical: 12,
+    paddingHorizontal: 25,
+    borderRadius: 30,
+    alignItems: 'center',
+    width: 220,
+    borderWidth: 2,
+    borderColor: '#E12712',
+  },
   buttonText: {
-    color: "#FFF",
-    fontSize: 16,
-    fontWeight: "bold",
+    color: 'white',
+    fontWeight: 'bold',
+    fontSize: 18,
+  },
+  transparentButtonText: {
+    color: '#fff',
+    fontWeight: 'bold',
+    fontSize: 18,
   },
   footer: {
-    marginTop: 30,
-    padding: 10,
-    borderTopWidth: 1,
-    borderTopColor: "#CCC",
-    width: "100%",
-    alignItems: "center",
+    marginTop: 20,
+    paddingVertical: 10,
+    
+    width: '100%',
+    alignItems: 'center',
   },
   footerText: {
     fontSize: 14,
-    color: "#888",
-    textAlign: "center",
+    color: '#fff',
+    textAlign: 'center',
   },
 });
