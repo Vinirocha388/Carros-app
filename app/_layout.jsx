@@ -1,6 +1,7 @@
 import { Stack } from "expo-router";
 
 
+
 export default function RootLayout() {
     return (
         <Stack screenOptions={{ 
@@ -17,6 +18,7 @@ export default function RootLayout() {
             <Stack.Screen name="index" options={{tittle:'Home'}} />
             <Stack.Screen name="about" options={{tittle:'Sobre'}} />
             <Stack.Screen name="login" options={{tittle:'Login'}} />
+            <Stack.Screen name="crono" options={{tittle:'Cronometro'}} />
             <Stack.Screen name="termos" options={{tittle:'Termos de Uso'}} />
         </Stack>
     )

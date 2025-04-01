@@ -32,7 +32,7 @@ export default function Home() {
       
       <View style={styles.buttonContainer}>
         <Text style={styles.buttonDescription}>Saiba mais sobre o universo do filme Carros</Text>
-        <Link href="/sobre" asChild>
+        <Link href="/about" asChild>
           <Pressable style={styles.button}>
             <Text style={styles.buttonText}>Sobre</Text>
           </Pressable>
@@ -50,6 +50,15 @@ export default function Home() {
         </Link>
       </View>
       <View style={styles.buttonContainer}>
+
+      <View style={styles.buttonContainer}>
+        <Text style={styles.buttonDescription}>Se aprofunde muito mais em nosso mundo e seja a velocidade !!</Text>
+        <Link href="/(aux)/crono" asChild>
+          <Pressable style={styles.button}>
+            <Text style={styles.buttonText}>Cronômetro</Text>
+          </Pressable>
+        </Link>
+      </View>
        
         <Link href="/(aux)/termos" asChild>
           <Pressable style={styles.transparentButton}>
