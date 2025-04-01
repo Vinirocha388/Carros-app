@@ -2,6 +2,10 @@ import React from "react";
 import { View, Text, TextInput, TouchableOpacity, Image, StyleSheet, KeyboardAvoidingView, Platform } from "react-native";
 
 const Login = () => {
+  const handleLogin = () => {
+    alert("Login realizado com sucesso!");
+  };
+
   return (
     <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : "height"} style={styles.container}>
       <View style={styles.card}>
@@ -27,7 +31,7 @@ const Login = () => {
             secureTextEntry
           />
         </View>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={handleLogin}>
           <Text style={styles.buttonText}>Entrar</Text>
         </TouchableOpacity>
       </View>
