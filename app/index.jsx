@@ -1,5 +1,6 @@
 import { View, Text, Pressable, StyleSheet, Image, ScrollView } from 'react-native';
 import { Link, Stack } from 'expo-router';
+  
 
 export default function Home() {
   return (
