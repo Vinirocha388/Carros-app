@@ -17,7 +17,7 @@ export default function Home() {
       <ImageBackground 
         source={{ uri: 'https://i.pinimg.com/736x/11/48/6b/11486b3e2adf78659e92db3224a5f1ec.jpg' }} 
         style={styles.background} 
-        imageStyle={{ opacity: 0.5 }}
+        imageStyle={styles.backgroundImage}
       >
         <View style={styles.content}>
           <Text style={styles.welcomeText}>Bem-vindo ao mundo de Carros!</Text>
@@ -75,10 +75,14 @@ const styles = StyleSheet.create({
     backgroundColor: '#8A0C0C',
   },
   background: {
-    width: width,
+    width: '100%',
     height: height,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  backgroundImage: {
+    resizeMode: 'cover',
+    opacity: 0.5,
   },
   content: {
     alignItems: 'center',
