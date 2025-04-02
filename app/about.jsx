@@ -26,7 +26,7 @@ const cardData = [
     id: 4,
     title: "Sobre o App",
     description: "Este aplicativo foi desenvolvido para integrar a navegação stack e inclui um cronômetro relacionado a corridas. Ele permite aos usuários acompanhar tempos de volta e melhorar sua performance nas pistas.",
-    imageUrl: "https://i.pinimg.com/736x/9c/34/e9/9c34e902be1142ba0368eb824b1b7a45.jpg"
+    imageUrl: "https://lumiere-a.akamaihd.net/v1/images/au_pixar_cars2_lightningmater_disneynews_incarticle_ima_76479cdb.jpeg?region=0,26,1152,648"
   }
 ];
 
