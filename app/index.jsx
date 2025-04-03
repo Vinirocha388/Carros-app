@@ -60,10 +60,6 @@ export default function Home() {
           </View>
         </View>
       </ImageBackground>
-      
-      <View style={styles.footer}>
-        <Text style={styles.footerText}>© 2023 Carros App. Todos os direitos reservados.</Text>
-      </View>
     </ScrollView>
   );
 }
@@ -152,18 +148,5 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontWeight: 'bold',
     fontSize: 18,
-  },
-  footer: {
-    position: 'absolute',
-    bottom: 0,
-    width: '100%',
-    paddingVertical: 10,
-    alignItems: 'center',
-    backgroundColor: '#8A0C0C',
-  },
-  footerText: {
-    fontSize: 14,
-    color: '#fff',
-    textAlign: 'center',
-  },
+  }
 });
