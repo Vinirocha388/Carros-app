@@ -1,6 +1,6 @@
 import React from 'react';
-import { View, Text, Image,FlatList, StyleSheet } from 'react-native';
-import { Stack } from 'expo-router';
+import { View, Text, Image,FlatList, StyleSheet, Pressable } from 'react-native';
+import { Stack, Link } from 'expo-router';
 
 
 const cardData = [
@@ -61,6 +61,12 @@ export default function CarsScreen() {
           </View>
         )}
       />
+
+<Link href="/" asChild>
+          <Pressable style={styles.button}>
+            <Text style={styles.buttonText}>Voltar para Home</Text>
+          </Pressable>
+        </Link>
 
       {/* Footer */}
       <View style={styles.footer}>
@@ -128,6 +134,20 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#555',
     marginBottom: 10,
+  },
+  button: {
+    backgroundColor: '#E12712',
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+    borderRadius: 5,
+    alignSelf: 'center',
+    marginTop: 20,
+  },
+  buttonText: {
+    color: '#fff',
+    fontSize: 16,
+    textAlign: 'center',
+    fontWeight: 'bold',
   },
   footer: {
     width: '100%',
